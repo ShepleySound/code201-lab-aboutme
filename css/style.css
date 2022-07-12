@@ -30,13 +30,27 @@ main {
   margin: 1rem 0px;
 }
 
-.start-button {
+.bio-block h2 {
+  font-size: 1.2rem;
+  color: #dddddd
+}
+
+.bio-block p {
+  line-height: 1.5rem;
+}
+
+.start-button,
+.score-card {
+  padding: .5rem;
   margin: 2rem 0px;
   font-size: 1.2rem;
   width: 50%;
-  height: 4rem;
-  background-color: #406440;
+  min-height: 4rem;
   border-radius: 1rem;
+}
+
+.start-button {
+  background-color: #406440;
   border: none;
 }
 
@@ -45,12 +59,8 @@ main {
 }
 
 .score-card {
-  margin: 1rem 0px;
-  font-size: 1.2rem;
-  width: 50%;
-  height: 4rem;
+  text-align: center;
   background-color: #363636;
-  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
