@@ -1,6 +1,8 @@
 'use strict';
 
+// Holds name input between button presses.
 let user = '';
+
 let startButton = document.querySelector('.start-button');
 startButton.addEventListener('click', () => {
 
@@ -11,7 +13,9 @@ startButton.addEventListener('click', () => {
     alert('Hello, name brother!');
   }
   else (alert(`Hello, ${user}!`));
+
   alert('The following trivia questions should be answered with a simple \'yes\' or \'no\'');
+
   let isAnswered = false;
   let points = 0;
 
@@ -21,6 +25,7 @@ startButton.addEventListener('click', () => {
     case 'y':
     case 'yes':
     case 'true':
+      // console.log('Correct');
       alert('That\'s correct!');
       points++;
       isAnswered = true;
@@ -28,6 +33,7 @@ startButton.addEventListener('click', () => {
     case 'n':
     case 'no':
     case 'false':
+      // console.log('Incorrect');
       alert('Sorry, that is not correct.');
       isAnswered = true;
       break;
@@ -37,7 +43,7 @@ startButton.addEventListener('click', () => {
     }
   }
 
-  console.log(`Points: ${points}`);
+  // console.log(`Points: ${points}`);
   isAnswered = false;
   while (!isAnswered) {
     let questionTwo = prompt('Does Marty McFly go back to the past in "Back to the Future"?');
@@ -45,6 +51,7 @@ startButton.addEventListener('click', () => {
     case 'y':
     case 'yes':
     case 'true':
+      // console.log('Correct');
       alert('That\'s correct!');
       points++;
       isAnswered = true;
@@ -52,6 +59,7 @@ startButton.addEventListener('click', () => {
     case 'n':
     case 'no':
     case 'false':
+      // console.log('Incorrect');
       alert('Sorry, that is not correct.');
       isAnswered = true;
       break;
@@ -61,7 +69,7 @@ startButton.addEventListener('click', () => {
     }
   }
 
-  console.log(`Points: ${points}`);
+  // console.log(`Points: ${points}`);
   isAnswered = false;
   while (!isAnswered) {
     let questionThree = prompt('Does Tatooine in Star Wars have three suns?');
@@ -69,12 +77,14 @@ startButton.addEventListener('click', () => {
     case 'y':
     case 'yes':
     case 'true':
+      // console.log('Incorrect');
       alert('Sorry, that is not correct.');
       isAnswered = true;
       break;
     case 'n':
     case 'no':
     case 'false':
+      // console.log('Correct');
       alert('That\'s correct!');
       points++;
       isAnswered = true;
@@ -85,7 +95,7 @@ startButton.addEventListener('click', () => {
     }
   }
 
-  console.log(`Points: ${points}`);
+  // console.log(`Points: ${points}`);
   isAnswered = false;
   while (!isAnswered) {
     let questionFour = prompt('Did a Lord of the Rings movie win Best Picture at the Oscars?');
@@ -93,6 +103,7 @@ startButton.addEventListener('click', () => {
     case 'y':
     case 'yes':
     case 'true':
+      // console.log('Correct');
       alert('That\'s correct!');
       points++;
       isAnswered = true;
@@ -100,6 +111,7 @@ startButton.addEventListener('click', () => {
     case 'n':
     case 'no':
     case 'false':
+      // console.log('Incorrect');
       alert('Sorry, that is not correct.');
       isAnswered = true;
       break;
@@ -109,7 +121,7 @@ startButton.addEventListener('click', () => {
     }
   }
 
-  console.log(`Points: ${points}`);
+  // console.log(`Points: ${points}`);
   isAnswered = false;
   while (!isAnswered) {
     let questionFive = prompt('Has a foreign film ever won Best Picture at the Oscars?');
@@ -117,6 +129,7 @@ startButton.addEventListener('click', () => {
     case 'y':
     case 'yes':
     case 'true':
+      // console.log('Correct');
       alert('That\'s correct!');
       points++;
       isAnswered = true;
@@ -124,6 +137,7 @@ startButton.addEventListener('click', () => {
     case 'n':
     case 'no':
     case 'false':
+      // console.log('Incorrect');
       alert('Sorry, that is not correct.');
       isAnswered = true;
       break;
@@ -135,8 +149,9 @@ startButton.addEventListener('click', () => {
 
   alert(`Thank you for taking the quiz, ${user}!`);
 
-  console.log(`Points: ${points}`);
+  // console.log(`Points: ${points}`);
 
+  // Update score card below button.
   let pointLabel = document.querySelector('.point-label');
   let pointAmount = document.querySelector('.point-amount');
   pointLabel.innerText = `${user}'s Score`;
