@@ -124,7 +124,7 @@ startButton.addEventListener('click', () => {
   // console.log(`Points: ${points}`);
   isAnswered = false;
   while (!isAnswered) {
-    let questionFive = prompt('Has a foreign film ever won Best Picture at the Oscars?');
+    let questionFive = prompt('Has a non-English language film ever won Best Picture at the Oscars?');
     switch (questionFive.toLowerCase()) {
     case 'y':
     case 'yes':
