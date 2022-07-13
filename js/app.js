@@ -14,27 +14,28 @@ startButton.addEventListener('click', () => {
   }
   else (alert(`Hello, ${user}!`));
 
-  alert('The following trivia questions should be answered with a simple \'yes\' or \'no\'');
+  alert('The following questions should be answered with a simple \'yes\' or \'no\'');
 
   let isAnswered = false;
   let points = 0;
 
   while (!isAnswered) {
-    let questionOne = prompt('Are there 86400 seconds in a day?');
+    let questionOne = prompt('Am I in the Air Force?');
     switch (questionOne.toLowerCase()) {
     case 'y':
     case 'yes':
     case 'true':
-      // console.log('Correct');
-      alert('That\'s correct!');
+      // console.log('Incorrect');
+      alert('No, that\'s not correct. If only...');
       points++;
       isAnswered = true;
       break;
     case 'n':
     case 'no':
     case 'false':
-      // console.log('Incorrect');
-      alert('Sorry, that is not correct.');
+      // console.log('Correct');
+      alert('That\'s correct! I\'m in the Army.');
+      points++;
       isAnswered = true;
       break;
     default:
@@ -45,13 +46,13 @@ startButton.addEventListener('click', () => {
 
   isAnswered = false;
   while (!isAnswered) {
-    let questionTwo = prompt('Does Marty McFly go back to the past in "Back to the Future"?');
+    let questionTwo = prompt('Have I watched every Star Wars film/show in chronological order?');
     switch (questionTwo.toLowerCase()) {
     case 'y':
     case 'yes':
     case 'true':
       // console.log('Correct');
-      alert('That\'s correct!');
+      alert('Yeah... That took a while.');
       points++;
       isAnswered = true;
       break;
@@ -59,7 +60,7 @@ startButton.addEventListener('click', () => {
     case 'no':
     case 'false':
       // console.log('Incorrect');
-      alert('Sorry, that is not correct.');
+      alert('I appreciate your faith in me, but I have...');
       isAnswered = true;
       break;
     default:
@@ -70,21 +71,21 @@ startButton.addEventListener('click', () => {
 
   isAnswered = false;
   while (!isAnswered) {
-    let questionThree = prompt('Does Tatooine in Star Wars have three suns?');
+    let questionThree = prompt('I used to play the euphonium. Do you know what that is?');
     switch (questionThree.toLowerCase()) {
     case 'y':
     case 'yes':
     case 'true':
-      // console.log('Incorrect');
-      alert('Sorry, that is not correct.');
+      // console.log('Correct');
+      alert('Good answer! You must know a lot about useless things.');
+      points++;
       isAnswered = true;
       break;
     case 'n':
     case 'no':
     case 'false':
-      // console.log('Correct');
-      alert('That\'s correct!');
-      points++;
+      // console.log('Incorrect');
+      alert('Wrong answer... Google it and come back, please.');
       isAnswered = true;
       break;
     default:
@@ -95,13 +96,13 @@ startButton.addEventListener('click', () => {
 
   isAnswered = false;
   while (!isAnswered) {
-    let questionFour = prompt('Did a Lord of the Rings movie win Best Picture at the Oscars?');
+    let questionFour = prompt('Do I have a Lord of the Rings tattoo?');
     switch (questionFour.toLowerCase()) {
     case 'y':
     case 'yes':
     case 'true':
       // console.log('Correct');
-      alert('That\'s correct!');
+      alert('I do! It\'s the broken sword Narsil, on my right forearm.');
       points++;
       isAnswered = true;
       break;
@@ -120,21 +121,21 @@ startButton.addEventListener('click', () => {
 
   isAnswered = false;
   while (!isAnswered) {
-    let questionFive = prompt('Has a non-English language film ever won Best Picture at the Oscars?');
+    let questionFive = prompt('Do I have any dogs?');
     switch (questionFive.toLowerCase()) {
     case 'y':
     case 'yes':
     case 'true':
-      // console.log('Correct');
-      alert('That\'s correct!');
-      points++;
+      // console.log('Incorrect');
+      alert('Nope, I just have two cats. One of them hangs out on my desk sometimes.');
       isAnswered = true;
       break;
     case 'n':
     case 'no':
     case 'false':
-      // console.log('Incorrect');
-      alert('Sorry, that is not correct.');
+      // console.log('Correct');
+      alert('Correct! Maybe soon, though. My cats would like a new friend.');
+      points++;
       isAnswered = true;
       break;
     default:
@@ -143,7 +144,7 @@ startButton.addEventListener('click', () => {
     }
   }
 
-  alert(`Thank you for taking the quiz, ${user}!`);
+  alert(`Thank you for getting to know me, ${user}!`);
 
   // Update score card below button.
   let pointLabel = document.querySelector('.point-label');
