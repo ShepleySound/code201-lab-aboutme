@@ -20,8 +20,8 @@ startButton.addEventListener('click', () => {
   let points = 0;
 
   while (!isAnswered) {
-    let questionOne = prompt('Am I in the Air Force?');
-    switch (questionOne.toLowerCase()) {
+    let answerOne = prompt('Am I in the Air Force?');
+    switch (answerOne.toLowerCase()) {
     case 'y':
     case 'yes':
     case 'true':
@@ -45,8 +45,8 @@ startButton.addEventListener('click', () => {
 
   isAnswered = false;
   while (!isAnswered) {
-    let questionTwo = prompt('Have I watched every Star Wars film/show in chronological order?');
-    switch (questionTwo.toLowerCase()) {
+    let answerTwo = prompt('Have I watched every Star Wars film/show in chronological order?');
+    switch (answerTwo.toLowerCase()) {
     case 'y':
     case 'yes':
     case 'true':
@@ -70,8 +70,8 @@ startButton.addEventListener('click', () => {
 
   isAnswered = false;
   while (!isAnswered) {
-    let questionThree = prompt('I used to play the euphonium. Do you know what that is?');
-    switch (questionThree.toLowerCase()) {
+    let answerThree = prompt('I used to play the euphonium. Do you know what that is?');
+    switch (answerThree.toLowerCase()) {
     case 'y':
     case 'yes':
     case 'true':
@@ -95,8 +95,8 @@ startButton.addEventListener('click', () => {
 
   isAnswered = false;
   while (!isAnswered) {
-    let questionFour = prompt('Do I have a Lord of the Rings tattoo?');
-    switch (questionFour.toLowerCase()) {
+    let answerFour = prompt('Do I have a Lord of the Rings tattoo?');
+    switch (answerFour.toLowerCase()) {
     case 'y':
     case 'yes':
     case 'true':
@@ -120,8 +120,8 @@ startButton.addEventListener('click', () => {
 
   isAnswered = false;
   while (!isAnswered) {
-    let questionFive = prompt('Do I have any dogs?');
-    switch (questionFive.toLowerCase()) {
+    let answerFive = prompt('Do I have any dogs?');
+    switch (answerFive.toLowerCase()) {
     case 'y':
     case 'yes':
     case 'true':
@@ -146,9 +146,9 @@ startButton.addEventListener('click', () => {
   isAnswered = false;
   let guessesRemaining = 4;
   while (!isAnswered && guessesRemaining) {
-    let questionSix = prompt('How many years old am I?');
-    let answerInt = parseInt(questionSix);
-    if (questionSix === null) {
+    let answerSix = prompt('How many years old am I?');
+    let answerInt = parseInt(answerSix);
+    if (answerSix === null) {
       break;
     }
     if (answerInt === 27) {
@@ -176,9 +176,9 @@ startButton.addEventListener('click', () => {
   guessesRemaining = 6;
   let possibilities = ['Myrtle Beach', 'Columbia', 'Baltimore', 'El Paso', 'Federal Way', 'Tacoma'];
   while (!isAnswered && guessesRemaining) {
-    let questionSeven = prompt('Guess a city that I\'ve lived in (or currently live in).');
+    let answerSeven = prompt('Guess a city that I\'ve lived in (or currently live in).');
     possibilities.forEach((element, i) => {
-      if (element.toLowerCase() === questionSeven.toLowerCase()) {
+      if (element.toLowerCase() === answerSeven.toLowerCase()) {
         points++;
         possibilities.splice(i, 1);
         let citiesString = '';
