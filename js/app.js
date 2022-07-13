@@ -26,8 +26,7 @@ startButton.addEventListener('click', () => {
     case 'yes':
     case 'true':
       // console.log('Incorrect');
-      alert('No, that\'s not correct. If only...');
-      points++;
+      alert('No, that\'s not correct.');
       isAnswered = true;
       break;
     case 'n':
@@ -175,8 +174,53 @@ startButton.addEventListener('click', () => {
 
   isAnswered = false;
   guessesRemaining = 6;
+  let possibilities = ['Myrtle Beach', 'Columbia', 'Baltimore', 'El Paso', 'Federal Way', 'Tacoma'];
+  while (!isAnswered && guessesRemaining) {
+    let questionSeven = prompt('Guess a city that I\'ve lived in (or currently live in).');
+    possibilities.forEach((element, i) => {
+      if (element.toLowerCase() === questionSeven.toLowerCase()) {
+        points++;
+        possibilities.splice(i, 1);
+        let citiesString = '';
+        for (let i = 0; i < possibilities.length; i++) {
+          if (i === possibilities.length - 1) {
+            citiesString += `${possibilities[i]}.`;
+          }
+          else {
+            citiesString += `${possibilities[i]}, `;
+          }
 
-  alert(`Thank you for getting to know me, ${user}!`);
+          if (i === possibilities.length - 2) {
+            citiesString += 'and ';
+          }
+        }
+        alert(`Correct! I've also lived in ${citiesString}`);
+        isAnswered = true;
+      }
+    });
+    if (!isAnswered) {
+      guessesRemaining--;
+      if (guessesRemaining) {
+        alert(`Nope... Haven't lived there. Guesses remaining: ${guessesRemaining}`);
+      } else {
+        let citiesString = '';
+        for (let i = 0; i < possibilities.length; i++) {
+          if (i === possibilities.length - 1) {
+            citiesString += `${possibilities[i]}.`;
+          }
+          else {
+            citiesString += `${possibilities[i]}, `;
+          }
+          if (i === possibilities.length - 2) {
+            citiesString += 'and ';
+          }
+        }
+        alert(`Sorry, no more guesses. I've lived in ${citiesString}`);
+      }
+    }
+  }
+
+  alert(`Thank you for getting to know me, ${user}! Your final score is ${points}.`);
 
   // Update score card below button.
   let pointLabel = document.querySelector('.point-label');
