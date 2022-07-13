@@ -144,6 +144,38 @@ startButton.addEventListener('click', () => {
     }
   }
 
+  isAnswered = false;
+  let guessesRemaining = 4;
+  while (!isAnswered && guessesRemaining) {
+    let questionSix = prompt('How many years old am I?');
+    let answerInt = parseInt(questionSix);
+    if (questionSix === null) {
+      break;
+    }
+    if (answerInt === 27) {
+      alert('Correct! I\'m 27 years old.');
+      points++;
+      isAnswered = true;
+    }
+    else if (answerInt > 27 && answerInt <= 100) {
+      guessesRemaining--;
+      alert(`Too high... Guesses remaining: ${guessesRemaining}`);
+    }
+    else if (answerInt < 27 && answerInt >= 1) {
+      guessesRemaining--;
+      alert(`Too low... Guesses remaining: ${guessesRemaining}`);
+    }
+    else {
+      alert('Please input a valid number between 1 and 100');
+    }
+    if (!guessesRemaining) {
+      alert('The correct answer is 27.');
+    }
+  }
+
+  isAnswered = false;
+  guessesRemaining = 6;
+
   alert(`Thank you for getting to know me, ${user}!`);
 
   // Update score card below button.
