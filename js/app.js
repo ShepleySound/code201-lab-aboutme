@@ -45,7 +45,7 @@ function trueOrFalseQuestions(questionsDataArray){
   questionsDataArray.forEach(questionData => {
     let isAnswered = false;
     while (!isAnswered) {
-      answerBool
+      answerBool;
       let answer = prompt(questionData[0]);
       switch (answer.toLowerCase()) {
       case 'y':
@@ -70,7 +70,7 @@ function trueOrFalseQuestions(questionsDataArray){
       points++;
     } else {
       alert(questionData[3]);
-      points++
+      points++;
     }
   });
 }
