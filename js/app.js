@@ -2,6 +2,7 @@
 
 // Holds name input between button presses.
 let user = '';
+let points;
 
 let startButton = document.querySelector('.start-button');
 startButton.addEventListener('click', () => {
@@ -16,9 +17,26 @@ startButton.addEventListener('click', () => {
 
   alert('The following questions should be answered with a simple \'yes\' or \'no\'');
 
-  let isAnswered = false;
-  let points = 0;
+  points = 0;
+  question1();
+  question2();
+  question3();
+  question4();
+  question5();
+  question6(4);
+  question7(6);
 
+  alert(`Thank you for getting to know me, ${user}! Your final score is ${points}.`);
+
+  // Update score card below button.
+  let pointLabel = document.querySelector('.point-label');
+  let pointAmount = document.querySelector('.point-amount');
+  pointLabel.innerText = `${user}'s Score`;
+  pointAmount.innerText = `${points}`;
+});
+
+function question1(){
+  let isAnswered = false;
   while (!isAnswered) {
     let answerOne = prompt('Am I in the Air Force?');
     switch (answerOne.toLowerCase()) {
@@ -42,8 +60,10 @@ startButton.addEventListener('click', () => {
       break;
     }
   }
+}
 
-  isAnswered = false;
+function question2(){
+  let isAnswered = false;
   while (!isAnswered) {
     let answerTwo = prompt('Have I watched every Star Wars film/show in chronological order?');
     switch (answerTwo.toLowerCase()) {
@@ -67,8 +87,10 @@ startButton.addEventListener('click', () => {
       break;
     }
   }
+}
 
-  isAnswered = false;
+function question3(){
+  let isAnswered = false;
   while (!isAnswered) {
     let answerThree = prompt('I used to play the euphonium. Do you know what that is?');
     switch (answerThree.toLowerCase()) {
@@ -92,8 +114,10 @@ startButton.addEventListener('click', () => {
       break;
     }
   }
+}
 
-  isAnswered = false;
+function question4(){
+  let isAnswered = false;
   while (!isAnswered) {
     let answerFour = prompt('Do I have a Lord of the Rings tattoo?');
     switch (answerFour.toLowerCase()) {
@@ -117,8 +141,10 @@ startButton.addEventListener('click', () => {
       break;
     }
   }
+}
 
-  isAnswered = false;
+function question5(){
+  let isAnswered = false;
   while (!isAnswered) {
     let answerFive = prompt('Do I have any dogs?');
     switch (answerFive.toLowerCase()) {
@@ -142,9 +168,10 @@ startButton.addEventListener('click', () => {
       break;
     }
   }
+}
 
-  isAnswered = false;
-  let guessesRemaining = 4;
+function question6(guessesRemaining){
+  let isAnswered = false;
   while (!isAnswered && guessesRemaining) {
     let answerSix = prompt('How many years old am I?');
     let answerInt = parseInt(answerSix);
@@ -171,9 +198,10 @@ startButton.addEventListener('click', () => {
       alert('The correct answer is 27.');
     }
   }
+}
 
-  isAnswered = false;
-  guessesRemaining = 6;
+function question7(guessesRemaining){
+  let isAnswered = false;
   let possibilities = ['Myrtle Beach', 'Columbia', 'Baltimore', 'El Paso', 'Federal Way', 'Tacoma'];
   while (!isAnswered && guessesRemaining) {
     let answerSeven = prompt('Guess a city that I\'ve lived in (or currently live in).');
@@ -219,12 +247,4 @@ startButton.addEventListener('click', () => {
       }
     }
   }
-
-  alert(`Thank you for getting to know me, ${user}! Your final score is ${points}.`);
-
-  // Update score card below button.
-  let pointLabel = document.querySelector('.point-label');
-  let pointAmount = document.querySelector('.point-amount');
-  pointLabel.innerText = `${user}'s Score`;
-  pointAmount.innerText = `${points}`;
-});
+}
